@@ -1,0 +1,163 @@
+body {
+  height: 100vh;
+  font-size: 18px;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  height: 100%;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  width: 350px;
+  height: 550px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 12px;
+}
+
+.card-con {
+  margin: 20px 24px;
+}
+
+.image {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.6);
+  opacity: 0;
+  transition: 0.5s ease;
+  border-radius: 15px;
+}
+
+.overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease;
+}
+
+.image:hover .card-img {
+  opacity: 0.3;
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+
+.title {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  margin: 16px 0;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.title:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.desc {
+  color: hsl(215, 51%, 70%);
+  opacity: 0.8;
+  font-weight: 300;
+  margin: 16px 0;
+}
+
+div:nth-of-type(4) {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price_tag {
+  color: hsl(178, 100%, 50%);
+  display: inline-flex;
+  font-weight: 600;
+}
+
+.price_tag img {
+  margin-right: 8px;
+}
+
+.time_left {
+  color: hsl(215, 51%, 70%);
+  display: inline-flex;
+  font-weight: 300;
+}
+
+.time_left img {
+  margin-right: 8px;
+}
+
+hr {
+  border-color: hsl(215, 32%, 27%);
+  border-width: 0.5px;
+  margin: 20px auto;
+}
+
+.creator {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+}
+
+.creator img {
+  width: 30px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.creator span {
+  color: hsl(0, 0%, 100%);
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.creator span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+  color: hsl(0, 0%, 100%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    width: 330px;
+    height: 530px;
+  }
+}
